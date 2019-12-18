@@ -1,0 +1,14 @@
+# package directories
+node_modules/
+jspm_packages
+
+# Serverless directories
+.serverless
+
+.envrc
+
+send.js
+certs/private.pem.key
+certs/public.pem.key
+certs/certificate.pem.crt
+certs/AmazonRootCA1.pem

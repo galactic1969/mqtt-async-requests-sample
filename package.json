@@ -1,0 +1,15 @@
+{
+  "name": "mqtt-async-requests-sample",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "aws-iot-device-sdk": "^2.2.1",
+    "mqtt-async-requests": "github:galactic1969/mqtt-async-requests"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
