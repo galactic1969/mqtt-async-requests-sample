@@ -12,12 +12,12 @@ const device = awsIot.device({
 
 device.on('connect', function() {
   console.log('connect');
-  device.subscribe('hogefuga/+');
+  device.subscribe(['hoge/+', 'fuga/+', 'piyo/+']);
 });
 
 device.on('message', function(topic, payload) {
-  console.log(topic);
-  console.log(payload.toString());
+  console.log(`topic: ${topic}`);
+  console.log(`payload: ${payload.toString()}`);
 
-  device.publish(`${topic}/response`, JSON.stringify({ test_data: 'hogehoge'}));
+  device.publish(`${topic}/response`, JSON.stringify({ data: `${payload.toString()} response`}));
 });

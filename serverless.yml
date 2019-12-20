@@ -8,9 +8,15 @@ provider:
     AWS_IOT_HOST: ${env:AWS_IOT_HOST}
 
 functions:
-  hello:
-    handler: src/handler.hello
+  do:
+    handler: src/handler.do
     events:
       - http:
-          path: test
+          path: do
+          method: get
+  doMany:
+    handler: src/handler.doMany
+    events:
+      - http:
+          path: do-many
           method: get
